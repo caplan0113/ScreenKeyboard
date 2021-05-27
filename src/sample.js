@@ -56,7 +56,7 @@ function down(e){
   if(e.shiftKey && e.code=="Escape"){
     keymap["Backquote"][5] = keymap["CapsLock"][5] = keymap["KanaMode"][5] = defcolor;
   }
-  if(e.shiftKey && e.code=="KeyE") Text.remove(); Footer.remove();
+  if(e.shiftKey && e.code=="KeyE") {Text.remove(); Footer.remove();}
   keymap[e.code][5] = "#ff9933";
 }
 
