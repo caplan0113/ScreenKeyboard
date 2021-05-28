@@ -13,6 +13,7 @@ var pressed_text = ""
 var pressed_num = 0
 
 window.addEventListener("keydown", down);
+window.addEventListener("keyup", up);
 
 
 function draw(){
@@ -47,7 +48,7 @@ function keydraw(self, char, x, y, w, h, C) {
 function down(e){
   e.preventDefault();
   console.log("down:"+e.code+"|"+e.key)
-  if(keymap[e.code][5]==defcolor) {
+  if(e.code!="AltRight" && keymap[e.code][5]==defcolor) {
     pressed.push(e.code);
     if(pressed_num==0){
       pressed_text = keymap[e.code][0];
@@ -60,6 +61,9 @@ function down(e){
   }
   if(e.ctrlKey && e.shiftKey && e.code=="F5") window.location.reload();
   if(e.shiftKey && e.code=="KeyE") {Text.remove(); Footer.remove();}
+}
+
+function up(e){
   if(e.code=="Escape") {refresh();}
 }
 
