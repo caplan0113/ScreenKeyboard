@@ -50,7 +50,7 @@ var keymap = {
   "Insert" : ["PrtScr", W0+(hw+bet)*13, H0, hw, hw*0.666, defcolor],
   "Delete" : ["delete", W0+(hw+bet)*14, H0, hw, hw*0.666, defcolor],
   //1
-  "Backquote" : ["半角*", W1, H1, hw, hw, defcolor],
+  "Backquote" : ["半角", W1, H1, hw, hw, defcolor],
   "Digit1"  : ["1", W1+(hw+bet)*1, H1, hw, hw, defcolor],
   "Digit2"  : ["2", W1+(hw+bet)*2, H1, hw, hw, defcolor],
   "Digit3"  : ["3", W1+(hw+bet)*3, H1, hw, hw, defcolor],
@@ -81,7 +81,7 @@ var keymap = {
   "BracketRight"  :  ["[", W2+(hw+bet)*11 , H2, hw, hw, defcolor],
   "Enter"  :  ["Enter", W3+(hw+bet)*12 , H2, hw+hw*0.2, hw*2+hw*0.16, defcolor],
   //3
-  "CapsLock"  :  ["Caps Lock*", W1, H3, W3-hw*0.2-bet, hw, defcolor],
+  "CapsLock"  :  ["Caps Lock", W1, H3, W3-hw*0.2-bet, hw, defcolor],
   "KeyA"  :  ["A", W3, H3, hw, hw, defcolor],
   "KeyS"  :  ["S", W3+(hw+bet)*1, H3, hw, hw, defcolor],
   "KeyD"  :  ["D", W3+(hw+bet)*2, H3, hw, hw, defcolor],
@@ -107,7 +107,7 @@ var keymap = {
   "Period"  :  [".", W4+(hw+bet)*8, H4, hw, hw, defcolor],
   "Slash"  :  ["/", W4+(hw+bet)*9, H4, hw, hw, defcolor],
   "IntlRo"  :  ["\\", W4+(hw+bet)*10, H4, hw, hw, defcolor],
-  "ControlRight"  :  ["Shift", W4+(hw+bet)*11, H4, hw+hw*0.82, hw, defcolor],
+  "ShiftRight"  :  ["Shift", W4+(hw+bet)*11, H4, hw+hw*0.82, hw, defcolor],
   //5
   "ControlLeft"  :  ["Ctrl", x1, H5, hw, hw, defcolor],
   "Fn" : ["fn", x2, H5, hw, hw, defcolor],
@@ -116,10 +116,10 @@ var keymap = {
   "NonConvert"  :  ["無変換", x5, H5, hw, hw, defcolor],
   "Space"  :  ["", x6, H5, hw*3.5, hw, defcolor],
   "Convert"  :  ["変換", x7, H5, hw, hw, defcolor],
-  "KanaMode"  : ["かな*", x8, H5, hw, hw, defcolor],
+  "KanaMode"  : ["かな", x8, H5, hw, hw, defcolor],
   "AltRight"   : ["Alt", x9, H5, hw, hw, defcolor],
 //  "ContextMenu"   : ["", x10, H5, hw, hw, defcolor],
-  "ShiftRight"  : ["Ctrl", x10, H5, hw, hw, defcolor],
+  "ControlRight"  : ["Ctrl", x10, H5, hw, hw, defcolor],
   //arrow
   "ArrowUp"  : ["↑", x12, H5, hw*0.9, hw*0.45, defcolor],
   "ArrowLeft"   : ["←", x11, H5+hw*0.55, hw*0.9, hw*0.45, defcolor],

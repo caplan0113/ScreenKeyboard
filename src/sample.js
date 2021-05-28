@@ -1,15 +1,18 @@
 let can = document.getElementById("cvs")
 let Text = document.getElementById("text")
 let Footer = document.getElementById("footer")
+let Keyname = document.getElementById("keyname")
 can.style.border = "1px solid";
 let ctx = can.getContext('2d')
-
 ctx.lineWidth = 1;
 ctx.textAlign = "center"
 ctx.font = "italic 15px Arial";
 
+var pressed = []
+var pressed_text = ""
+var pressed_num = 0
+
 window.addEventListener("keydown", down);
-window.addEventListener("keyup", up);
 
 
 function draw(){
@@ -41,30 +44,28 @@ function keydraw(self, char, x, y, w, h, C) {
   self.fillText(char, x+w/2, y+h/2+5)
 }
 
-function randomColor() {
-  let r = Math.floor(Math.random() * 255);
-  let g = Math.floor(Math.random() * 255);
-  let b = Math.floor(Math.random() * 255);
-  let color = `rgb(${r},${g},${b})`;
-  return color;
-}
-
 function down(e){
   e.preventDefault();
   console.log("down:"+e.code+"|"+e.key)
-  if(e.ctrlKey && e.shiftKey && e.code=="F5") window.location.reload();
-  if(e.shiftKey && e.code=="Escape"){
-    keymap["Backquote"][5] = keymap["CapsLock"][5] = keymap["KanaMode"][5] = defcolor;
+  if(keymap[e.code][5]==defcolor) {
+    pressed.push(e.code);
+    if(pressed_num==0){
+      pressed_text = keymap[e.code][0];
+      pressed_num++;
+    }else{
+      pressed_text += " + " + keymap[e.code][0];
+    }
+    Keyname.innerHTML = pressed_text
+    keymap[e.code][5] = "#ff9933";
   }
+  if(e.ctrlKey && e.shiftKey && e.code=="F5") window.location.reload();
   if(e.shiftKey && e.code=="KeyE") {Text.remove(); Footer.remove();}
-  keymap[e.code][5] = "#ff9933";
+  if(e.code=="Escape") {refresh();}
 }
 
-function press(e){ e.preventDefault(); }
-
-function up(e){
-  e.preventDefault();
-  console.log("up:"+e.code+"|"+e.key)
-  
-  keymap[e.code][5] = "#ffffff";
+function refresh(){
+  for(var i of pressed){ keymap[i][5] = defcolor;}
+  pressed_num = 0;
+  pressed_text = "スクリーンキーボード";
+  Keyname.innerHTML = pressed_text;
 }
