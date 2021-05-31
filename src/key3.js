@@ -47,7 +47,7 @@ var keymap = {
   "F10" : ["F10", W0+(hw+bet)*10, H0, hw, hw*0.666, defcolor],
   "F11" : ["F11", W0+(hw+bet)*11, H0, hw, hw*0.666, defcolor],
   "F12" : ["F12", W0+(hw+bet)*12, H0, hw, hw*0.666, defcolor],
-  "Insert" : ["PrtScr", W0+(hw+bet)*13, H0, hw, hw*0.666, defcolor],
+  "Insert" : ["PrtSc", W0+(hw+bet)*13, H0, hw, hw*0.666, defcolor],
   "Delete" : ["delete", W0+(hw+bet)*14, H0, hw, hw*0.666, defcolor],
   //1
   "Backquote" : ["半角", W1, H1, hw, hw, defcolor],
@@ -112,14 +112,14 @@ var keymap = {
   "ControlLeft"  :  ["Ctrl", x1, H5, hw, hw, defcolor],
   "Fn" : ["fn", x2, H5, hw, hw, defcolor],
   "MetaLeft"  :  ["Win", x3, H5, hw, hw, defcolor],
-  "AltLeft"  :  ["Alt", x4, H5, hw, hw, defcolor],
+  "ControlRight"  :  ["Alt", x4, H5, hw, hw, defcolor], //Alt
   "NonConvert"  :  ["無変換", x5, H5, hw, hw, defcolor],
   "Space"  :  ["[ ]", x6, H5, hw*3.5, hw, defcolor],
   "Convert"  :  ["変換", x7, H5, hw, hw, defcolor],
   "KanaMode"  : ["かな", x8, H5, hw, hw, defcolor],
   "AltRight"   : ["Alt", x9, H5, hw, hw, defcolor],
 //  "ContextMenu"   : ["", x10, H5, hw, hw, defcolor],
-  "ControlRight"  : ["Ctrl", x10, H5, hw, hw, defcolor],
+  "a"  : ["Ctrl", x10, H5, hw, hw, defcolor],
   //arrow
   "ArrowUp"  : ["↑", x12, H5, hw*0.9, hw*0.45, defcolor],
   "ArrowLeft"   : ["←", x11, H5+hw*0.55, hw*0.9, hw*0.45, defcolor],
