@@ -114,11 +114,11 @@ var keymap = {
   "MetaLeft"  :  ["Win", x3, H5, hw, hw, defcolor],
   "ControlRight"  :  ["Alt", x4, H5, hw, hw, defcolor], //Alt
   "NonConvert"  :  ["無変換", x5, H5, hw, hw, defcolor],
-  "Space"  :  ["[ ]", x6, H5, hw*3.5, hw, defcolor],
+  "Space"  :  ["Space", x6, H5, hw*3.5, hw, defcolor],
   "Convert"  :  ["変換", x7, H5, hw, hw, defcolor],
   "KanaMode"  : ["かな", x8, H5, hw, hw, defcolor],
-  "AltRight"   : ["Alt", x9, H5, hw, hw, defcolor],
-//  "ContextMenu"   : ["", x10, H5, hw, hw, defcolor],
+//  "AltRight"   : ["Alt", x9, H5, hw, hw, defcolor],
+  "ContextMenu"   : ["ContextMenu", x9, H5, hw, hw, defcolor],
   "a"  : ["Ctrl", x10, H5, hw, hw, defcolor],
   //arrow
   "ArrowUp"  : ["↑", x12, H5, hw*0.9, hw*0.45, defcolor],

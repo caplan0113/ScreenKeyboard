@@ -2,6 +2,7 @@ let can = document.getElementById("cvs")
 let Text = document.getElementById("text")
 let Footer = document.getElementById("footer")
 let Keyname = document.getElementById("keyname")
+let keyboard = document.getElementById("keyboard")
 can.style.border = "1px solid";
 let ctx = can.getContext('2d')
 ctx.lineWidth = 1;
@@ -14,12 +15,13 @@ var pressed_num = 0
 
 window.addEventListener("keydown", down);
 window.addEventListener("keyup", up);
+keyname.addEventListener("click", click);
 
 
 function draw(){
   ctx.clearRect(0, 0, can.width, can.height);
   for(let i in keymap){
-    if(i == "Space") keydraw(ctx, " ", keymap[i][1], keymap[i][2], keymap[i][3], keymap[i][4], keymap[i][5]);
+    if(i == "Space" || i == "ContextMenu") keydraw(ctx, " ", keymap[i][1], keymap[i][2], keymap[i][3], keymap[i][4], keymap[i][5]);
     else keydraw(ctx, keymap[i][0], keymap[i][1], keymap[i][2], keymap[i][3], keymap[i][4], keymap[i][5]);
   }
 }
@@ -48,7 +50,7 @@ function keydraw(self, char, x, y, w, h, C) {
 
 function down(e){
   e.preventDefault();
-  console.log("down:"+e.code+"|"+e.key)
+  //console.log("down:"+e.code+"|"+e.key)
   if(e.code!="AltRight" && keymap[e.code][5]==defcolor) {
     pressed.push(e.code);
     if(pressed_num==0){
@@ -73,4 +75,14 @@ function refresh(){
   pressed_num = 0;
   pressed_text = "スクリーンキーボード";
   Keyname.innerHTML = pressed_text;
+}
+
+function click(){
+  if(pressed_num==0){
+    pressed_text = "クリック";
+    pressed_num++;
+  }else{
+    pressed_text += " + クリック";
+  }
+  Keyname.innerHTML = pressed_text
 }
