@@ -114,7 +114,7 @@ var keymap = {
   "MetaLeft"  :  ["Win", x3, H5, hw, hw, defcolor],
   "AltLeft"  :  ["Alt", x4, H5, hw, hw, defcolor],
   "NonConvert"  :  ["無変換", x5, H5, hw, hw, defcolor],
-  "Space"  :  ["", x6, H5, hw*3.5, hw, defcolor],
+  "Space"  :  ["[ ]", x6, H5, hw*3.5, hw, defcolor],
   "Convert"  :  ["変換", x7, H5, hw, hw, defcolor],
   "KanaMode"  : ["かな", x8, H5, hw, hw, defcolor],
   "AltRight"   : ["Alt", x9, H5, hw, hw, defcolor],

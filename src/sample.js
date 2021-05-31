@@ -19,7 +19,8 @@ window.addEventListener("keyup", up);
 function draw(){
   ctx.clearRect(0, 0, can.width, can.height);
   for(let i in keymap){
-    keydraw(ctx, keymap[i][0], keymap[i][1], keymap[i][2], keymap[i][3], keymap[i][4], keymap[i][5]);
+    if(i == "Space") keydraw(ctx, " ", keymap[i][1], keymap[i][2], keymap[i][3], keymap[i][4], keymap[i][5]);
+    else keydraw(ctx, keymap[i][0], keymap[i][1], keymap[i][2], keymap[i][3], keymap[i][4], keymap[i][5]);
   }
 }
 setInterval(draw, 10);
@@ -60,7 +61,7 @@ function down(e){
     keymap[e.code][5] = "#ff9933";
   }
   if(e.ctrlKey && e.shiftKey && e.code=="F5") window.location.reload();
-  if(e.shiftKey && e.code=="KeyE") {Text.remove(); Footer.remove();}
+  if(e.shiftKey && e.code=="KeyE") {Text.remove(); Footer.remove(); refresh();}
 }
 
 function up(e){
