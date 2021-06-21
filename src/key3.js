@@ -47,8 +47,8 @@ var keymap = {
   "F10" : ["F10", W0+(hw+bet)*10, H0, hw, hw*0.666, defcolor],
   "F11" : ["F11", W0+(hw+bet)*11, H0, hw, hw*0.666, defcolor],
   "F12" : ["F12", W0+(hw+bet)*12, H0, hw, hw*0.666, defcolor],
-  "Insert" : ["PrtSc", W0+(hw+bet)*13, H0, hw, hw*0.666, defcolor],
-  "Delete" : ["delete", W0+(hw+bet)*14, H0, hw, hw*0.666, defcolor],
+  "Delete" : ["PrtSc", W0+(hw+bet)*13, H0, hw, hw*0.666, defcolor],
+  "Insert" : ["delete", W0+(hw+bet)*14, H0, hw, hw*0.666, defcolor],
   //1
   "Backquote" : ["半角", W1, H1, hw, hw, defcolor],
   "Digit1"  : ["1", W1+(hw+bet)*1, H1, hw, hw, defcolor],

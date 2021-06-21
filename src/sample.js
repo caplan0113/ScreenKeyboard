@@ -61,7 +61,18 @@ function down(e){
     }
     Keyname.innerHTML = pressed_text
     keymap[e.code][5] = "#ff9933";
+  }else if(e.code=="AltRight"){
+    pressed.push("ControlRight");
+    if(pressed_num==0){
+      pressed_text = keymap["ControlRight"][0];
+      pressed_num++;
+    }else{
+      pressed_text += " + " + keymap["ControlRight"][0];
+    }
+    Keyname.innerHTML = pressed_text
+    keymap["ControlRight"][5] = "#ff9933";
   }
+  
   if(e.ctrlKey && e.shiftKey && e.code=="F5") window.location.reload();
   if(e.shiftKey && e.code=="KeyE") {Text.remove(); Footer.remove(); refresh();}
 }
